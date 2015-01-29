@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+double round(double x)
+{
+  if(x<0) x -= 0.005;
+  else if(x>0) x += 0.005;
+  int pom = (int) 100*x;
+  x = pom/100.0;
+  return x;
+}
+int main()
+{
+  double a, b, c;
+  cin >> a >> b >> c;
+  //ax+b = c
+  //ax = c-b
+  //x = (c-b)/a
+  //wynik = round(1.526);
+  //cout << "Wynik: " << wynik << endl;
+  if(c-b == 0 && a == 0) cout << "NWR" << endl;
+  else if(a == 0) cout << "BR" << endl;
+  else cout << round((c-b)/a) << endl;
+}
