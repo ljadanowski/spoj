@@ -6,11 +6,13 @@ int main()
   int t, n, liczba, wynik = 0;
   cin >> t;
   cin >> n;
-  while(n--) {
-	while(t--) {
+  while(t--) {
+	while(n--) {
 		cin >> liczba;
 		wynik += liczba;
 	}
-  cout << wynik << endl;
+    cout << wynik << endl;
+    cin >> n;
+    wynik = 0;
   }
 }
