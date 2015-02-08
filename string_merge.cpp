@@ -6,18 +6,15 @@ char* string_merge(char *, char *);
 
 int main()
 {   
-  int t,n;    
+  int t;    
   char S1[T_SIZE], S2[T_SIZE], *S;    
   cin >> t; /* wczytaj liczbę testów */   
-  cin.getline(S1,T_SIZE);    
-  while(t)
-  {      
-    cin.getline(S1,T_SIZE,' ');     
-    cin.getline(S2,T_SIZE);           
+  while(t--)
+  {  
+    cin >> S1; cin >> S2;
     S=string_merge(S1,S2);     
     cout << S << endl;     
     delete[] S;     
-    t--;      
   }     
   return 0; 
 } 
