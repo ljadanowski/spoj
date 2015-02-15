@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a, b, mniejsza, i, nwd, t;
+  cin >> t;
+  while(t--)
+  {
+    cin >> a >> b;
+    mniejsza = a<b ? a : b;
+    for(i=1; i<=mniejsza; i++)
+    if(a%i==0 && b%i == 0)
+    nwd = i;
+    cout << nwd << endl;
+  }
+}
